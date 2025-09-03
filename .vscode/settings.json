@@ -1,0 +1,23 @@
+{
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.wordWrap": "on",
+    "python.defaultInterpreterPath": "./app/.venv/bin/python",
+    "[dotenv]": {
+        "editor.defaultFormatter": "foxundermoon.shell-format"
+    },
+    "[dockerfile]": {
+        "editor.formatOnSave": false,
+    },
+    "[yaml]": {
+        "editor.formatOnSave": false,
+    },
+    "[properties]": {
+        "editor.defaultFormatter": "foxundermoon.shell-format"
+    },
+    "terminal.integrated.env.linux": {
+    "VIRTUAL_ENV": "${workspaceFolder}/app/.venv",
+    "PATH": "${workspaceFolder}/app/.venv/bin:${env:PATH}"
+    }
+
+}
