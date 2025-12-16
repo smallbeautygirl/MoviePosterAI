@@ -20,13 +20,13 @@ HEADERS = {
 csv_directory = os.getenv("CSV_DIRECTORY", "data_collection/csv")
 if not os.path.exists(csv_directory):
     os.makedirs(csv_directory)
-TOP_RATED_MOVIE_IDS_FILENAME = os.path.join(csv_directory, 'tmdb_top_rated_movies_100.csv')
-MOVIE_DETAILS_FILENAME = os.path.join(csv_directory, 'tmdb_top_rated_movie_details_100.csv')
+TOP_RATED_MOVIE_IDS_FILENAME = os.path.join(csv_directory, 'tmdb_top_rated_movies.csv')
+MOVIE_DETAILS_FILENAME = os.path.join(csv_directory, 'tmdb_top_rated_movie_details_10000.csv')
 
 # 設定日誌，方便追蹤進度與錯誤
 # Define the log file path
 log_directory = os.getenv("LOG_DIRECTORY", "logs")
-log_filename = "tmdb_api_details_100.log"
+log_filename = "tmdb_api_details_10000.log"
 log_filepath = os.path.join(log_directory, log_filename)
 
 # Ensure the log directory exists

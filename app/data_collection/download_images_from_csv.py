@@ -10,7 +10,7 @@ csv_directory = os.getenv("CSV_DIRECTORY", "data_collection/csv")
 if not os.path.exists(csv_directory):
     os.makedirs(csv_directory)
 
-MOVIE_DETAILS_FILENAME = os.path.join(csv_directory, 'tmdb_top_rated_movie_details_100.csv')
+MOVIE_DETAILS_FILENAME = os.path.join(csv_directory, 'tmdb_top_rated_movie_details_10000.csv')
 BACKDROP_DIRECTORY = os.getenv("BACKDROP_DIRECTORY", "data_collection/images/backdrops")
 POSTER_DIRECTORY = os.getenv("POSTER_DIRECTORY", "data_collection/images/posters")
 if not os.path.exists(BACKDROP_DIRECTORY):
@@ -19,7 +19,7 @@ if not os.path.exists(POSTER_DIRECTORY):
     os.makedirs(POSTER_DIRECTORY)
 
 log_directory = os.getenv("LOG_DIRECTORY", "logs")
-log_filename = "download_images_from_csv.log"
+log_filename = "download_images_from_csv_10000.log"
 log_filepath = os.path.join(log_directory, log_filename)
 
 logging.basicConfig(filename=log_filepath, level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
