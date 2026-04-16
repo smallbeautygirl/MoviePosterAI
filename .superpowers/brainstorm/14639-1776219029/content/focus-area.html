@@ -1,0 +1,29 @@
+<h2>論文的主要貢獻聚焦在哪裡？</h2>
+<p class="subtitle">碩士論文需要一個清楚的核心貢獻點 — 你的指導教授 CV 背景更傾向哪個方向？</p>
+
+<div class="options">
+  <div class="option" data-choice="generation" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>生成為主（Generation-focused）</h3>
+      <p>設計或改良一個能從電影資訊（片名、類型、劇情摘要）自動生成海報的模型</p>
+      <p style="margin-top:8px;font-size:0.85em;color:#888">技術：Diffusion Model、ControlNet、文字轉圖像（Text-to-Image）</p>
+    </div>
+  </div>
+  <div class="option" data-choice="evaluation" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>評估為主（Evaluation-focused）</h3>
+      <p>提出一套針對電影海報的自動評估框架，衡量海報的視覺品質、類型一致性、吸引力等</p>
+      <p style="margin-top:8px;font-size:0.85em;color:#888">技術：CLIP、美學評分模型、人類偏好對齊（RLHF）</p>
+    </div>
+  </div>
+  <div class="option" data-choice="both" onclick="toggleSelect(this)">
+    <div class="letter">C</div>
+    <div class="content">
+      <h3>生成 ＋ 評估（End-to-end Pipeline）</h3>
+      <p>建立完整流程：從電影資訊生成海報，再用自訂評估指標驗證品質</p>
+      <p style="margin-top:8px;font-size:0.85em;color:#888">範圍較廣，需要明確界定每個模組的貢獻</p>
+    </div>
+  </div>
+</div>

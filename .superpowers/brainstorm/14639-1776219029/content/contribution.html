@@ -1,0 +1,59 @@
+<h2>你的論文「新貢獻」是什麼？</h2>
+<p class="subtitle">碩士論文必須有一個別人沒做過（或做得不夠好）的點 — 以下是幾個可行方向</p>
+
+<div class="options">
+  <div class="option" data-choice="feedback-loop" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>🔄 自動迭代優化（Feedback Loop）</h3>
+      <p>LLM 生成提示詞 → 生成圖像 → CLIP 評分 → LLM 根據分數修改提示詞 → 再生成，形成閉環自動優化</p>
+      <p style="margin-top:6px;font-size:0.85em;color:#555"><strong>貢獻點：</strong>提出一個不需人工介入、可自動提升海報品質的迭代框架</p>
+      <div style="margin-top:8px;display:flex;gap:8px;flex-wrap:wrap">
+        <span style="background:#e8f5e9;color:#2e7d32;padding:2px 7px;border-radius:4px;font-size:0.8em">✅ 新穎性高</span>
+        <span style="background:#e8f5e9;color:#2e7d32;padding:2px 7px;border-radius:4px;font-size:0.8em">✅ CV 教授會有興趣</span>
+        <span style="background:#fff3e0;color:#e65100;padding:2px 7px;border-radius:4px;font-size:0.8em">⚠️ 實驗設計較複雜</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="option" data-choice="new-metrics" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>📐 提出新的海報評估指標</h3>
+      <p>現有指標（FID、CLIP Score）不是針對電影海報設計的。提出「類型一致性、角色顯著度、商業吸引力」等海報專屬指標，並驗證與人類評分的相關性</p>
+      <p style="margin-top:6px;font-size:0.85em;color:#555"><strong>貢獻點：</strong>建立電影海報評估的 Benchmark，讓未來研究有標準可循</p>
+      <div style="margin-top:8px;display:flex;gap:8px;flex-wrap:wrap">
+        <span style="background:#e8f5e9;color:#2e7d32;padding:2px 7px;border-radius:4px;font-size:0.8em">✅ 學術貢獻明確</span>
+        <span style="background:#fff3e0;color:#e65100;padding:2px 7px;border-radius:4px;font-size:0.8em">⚠️ 需要收集人類標注資料</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="option" data-choice="prompt-study" onclick="toggleSelect(this)">
+    <div class="letter">C</div>
+    <div class="content">
+      <h3>🔬 LLM 提示詞策略的系統性比較</h3>
+      <p>比較不同 LLM 提示詞設計策略（zero-shot、few-shot、chain-of-thought）對生成海報品質的影響，找出最有效的方法</p>
+      <p style="margin-top:6px;font-size:0.85em;color:#555"><strong>貢獻點：</strong>為「如何用 LLM 生成高品質圖像提示詞」提供系統性的實驗依據</p>
+      <div style="margin-top:8px;display:flex;gap:8px;flex-wrap:wrap">
+        <span style="background:#e8f5e9;color:#2e7d32;padding:2px 7px;border-radius:4px;font-size:0.8em">✅ 實驗設計清楚好執行</span>
+        <span style="background:#e8f5e9;color:#2e7d32;padding:2px 7px;border-radius:4px;font-size:0.8em">✅ 3 個月內最可控</span>
+        <span style="background:#fff3e0;color:#e65100;padding:2px 7px;border-radius:4px;font-size:0.8em">⚠️ 新穎性相對較低</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="option" data-choice="combined-ab" onclick="toggleSelect(this)">
+    <div class="letter">D</div>
+    <div class="content">
+      <h3>✨ A ＋ B 組合（推薦）</h3>
+      <p>同時提出新評估指標（B）＋ 用這個指標驅動閉環優化（A）。評估框架是貢獻一，迭代生成是貢獻二</p>
+      <p style="margin-top:6px;font-size:0.85em;color:#555"><strong>貢獻點：</strong>「提出指標 → 用指標優化生成」形成完整論文敘事，兩個貢獻相互支撐</p>
+      <div style="margin-top:8px;display:flex;gap:8px;flex-wrap:wrap">
+        <span style="background:#e8f5e9;color:#2e7d32;padding:2px 7px;border-radius:4px;font-size:0.8em">✅ 論文結構完整</span>
+        <span style="background:#e8f5e9;color:#2e7d32;padding:2px 7px;border-radius:4px;font-size:0.8em">✅ 最高學術價值</span>
+        <span style="background:#fff3e0;color:#e65100;padding:2px 7px;border-radius:4px;font-size:0.8em">⚠️ 工作量最大，需控制範圍</span>
+      </div>
+    </div>
+  </div>
+</div>

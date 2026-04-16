@@ -1,0 +1,73 @@
+<h2>論文方向草稿</h2>
+<p class="subtitle">整理成可以拿去跟教授討論的格式</p>
+
+<div class="section">
+  <span class="label">論文題目（中文）</span>
+  <h3 style="margin-top:6px;color:#1a237e;font-size:1.1em">基於大型語言模型之電影海報自動生成與多維品質評估閉環框架</h3>
+  <span class="label" style="margin-top:10px;display:block">論文題目（英文）</span>
+  <h3 style="margin-top:6px;color:#1a237e;font-size:1.0em">A Closed-Loop Framework for Automatic Movie Poster Generation and Multi-Dimensional Quality Evaluation via Large Language Models</h3>
+</div>
+
+<div class="section">
+  <span class="label">研究動機（給教授看的一段話）</span>
+  <p style="margin-top:6px;background:#f5f5f5;padding:12px;border-radius:6px;font-size:0.92em;line-height:1.7">
+    電影海報是重要的視覺行銷媒介，然而現有的自動圖像生成方法缺乏針對海報領域的專屬評估指標，導致生成結果難以量化與優化。本研究提出兩個核心貢獻：(1) 建立一套涵蓋類型一致性、視覺吸引力與語意對齊的多維評估框架，並驗證其與人類評分的相關性；(2) 設計以 LLM 為核心的閉環生成系統，透過評估分數自動回饋優化提示詞，無需人工介入即可迭代提升海報品質。
+  </p>
+</div>
+
+<div class="section">
+  <span class="label">兩個核心貢獻</span>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:8px">
+    <div style="background:#e8eaf6;padding:12px;border-radius:8px">
+      <strong>貢獻一：評估框架</strong>
+      <ul style="margin:8px 0 0 0;padding-left:16px;font-size:0.88em;line-height:1.8">
+        <li>類型一致性（CLIP Score）</li>
+        <li>視覺吸引力（NIMA 美學模型）</li>
+        <li>語意對齊（海報 vs 劇情摘要）</li>
+        <li>與人類評分做相關性驗證</li>
+      </ul>
+    </div>
+    <div style="background:#e8f5e9;padding:12px;border-radius:8px">
+      <strong>貢獻二：閉環生成</strong>
+      <ul style="margin:8px 0 0 0;padding-left:16px;font-size:0.88em;line-height:1.8">
+        <li>LLM 分析電影 metadata → 生成提示詞</li>
+        <li>Stable Diffusion 生成海報</li>
+        <li>評估框架打分</li>
+        <li>LLM 根據分數修改提示詞 → 迭代</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <span class="label">系統架構（5 個模組）</span>
+  <div style="margin-top:8px;display:flex;align-items:center;gap:6px;flex-wrap:wrap;font-size:0.85em">
+    <div style="background:#fff3e0;padding:8px 12px;border-radius:6px;border:1px solid #ffcc02">📦 資料模組<br><small>TMDB + Kaggle</small></div>
+    <span style="font-size:1.2em">→</span>
+    <div style="background:#e3f2fd;padding:8px 12px;border-radius:6px;border:1px solid #90caf9">🤖 LLM 提示詞生成<br><small>Claude / GPT-4</small></div>
+    <span style="font-size:1.2em">→</span>
+    <div style="background:#e8f5e9;padding:8px 12px;border-radius:6px;border:1px solid #a5d6a7">🎨 圖像生成<br><small>Stable Diffusion</small></div>
+    <span style="font-size:1.2em">→</span>
+    <div style="background:#fce4ec;padding:8px 12px;border-radius:6px;border:1px solid #f48fb1">📊 多維評估<br><small>CLIP + NIMA</small></div>
+    <span style="font-size:1.2em">↩</span>
+  </div>
+  <p style="font-size:0.82em;color:#888;margin-top:6px">評估分數回饋給 LLM 模組，形成閉環</p>
+</div>
+
+<div class="section">
+  <span class="label">資料來源（你已有基礎）</span>
+  <ul style="margin-top:6px;font-size:0.88em;line-height:1.8">
+    <li>✅ Kaggle 電影海報資料集（已有下載腳本）</li>
+    <li>✅ TMDB API（已有資料收集架構）</li>
+    <li>➕ 需要：小規模人類評分收集（問卷，約 50–100 張海報）</li>
+  </ul>
+</div>
+
+<div class="section">
+  <span class="label">預估時程（3 個月）</span>
+  <div style="margin-top:8px;font-size:0.88em">
+    <div style="display:flex;margin-bottom:6px"><span style="width:80px;font-weight:600;color:#555">Month 1</span><span>文獻回顧 + 資料收集 + 評估框架設計與實作</span></div>
+    <div style="display:flex;margin-bottom:6px"><span style="width:80px;font-weight:600;color:#555">Month 2</span><span>閉環生成系統實作 + 人類評分收集 + 實驗</span></div>
+    <div style="display:flex"><span style="width:80px;font-weight:600;color:#555">Month 3</span><span>結果分析 + 論文撰寫 + 修改</span></div>
+  </div>
+</div>
