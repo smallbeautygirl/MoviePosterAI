@@ -44,7 +44,7 @@ uv run python data_collection/call_tmdb_api_to_create_csv.py
 ```bash
 uv run python data_collection/collect_stratified_movies.py
 # 輸出：data_collection/csv/tmdb_stratified_movies.csv
-# 評分區間：4.0–5.5 / 5.5–7.0 / 7.0–8.0 / 8.0–10.0，各 500 部
+# 篩選條件：2000 年後、英語電影、vote_count ≥ 200
 ```
 
 ### Step 2：下載海報圖片
@@ -94,4 +94,17 @@ uv sync
 | 10,000 部電影 metadata（top_rated） | ✅ 完成 |
 | 海報批次下載腳本 | ✅ 完成 |
 | CLIP embedding（768 維）+ consistency_score | ✅ 完成 |
-| 分層抽樣資料收集（4 評分區間） | 🔲 待執行 |
+| 分層抽樣資料收集（4 評分區間） | ✅ 完成 |
+
+### 分層抽樣結果（`tmdb_stratified_movies.csv`）
+
+篩選條件：2000 年後上映、英語電影、vote_count ≥ 200，共 **2,000 部電影**
+
+| Band | 評分範圍 | 數量 | 平均分 | 最低 | 最高 |
+|---|---|---|---|---|---|
+| low | 4.5–5.5 | 500 | 5.17 | 4.50 | 5.50 |
+| medium | 5.5–6.5 | 500 | 6.15 | 5.51 | 6.50 |
+| good | 6.5–7.5 | 500 | 7.01 | 6.50 | 7.50 |
+| excellent | 7.5–10.0 | 500 | 7.80 | 7.50 | 8.53 |
+
+整體 vote_average 範圍：4.5–8.5，四等分均勻，適合用於 Pearson 相關係數驗證。
